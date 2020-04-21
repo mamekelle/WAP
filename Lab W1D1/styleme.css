@@ -1,5 +1,5 @@
 body{
-    background-color:#e8e6e6;
+    background-color:#bdbbbb;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', 'Arial', 'sans-serif';
 }
 ul > li{
@@ -19,4 +19,7 @@ a:hover{
 }
 p::first-letter {
     font-size: 1.5em;
+}
+dt{
+color:#FFFF00;
 }
