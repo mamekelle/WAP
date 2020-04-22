@@ -1,0 +1,63 @@
+body {
+    background-image: url('../recipeImages/silverware.jpg');
+    background-repeat: repeat;
+    background-attachment: fixed;
+    color: #404040;
+    font-size: 11pt;
+    font-family: 'Georgia', 'Garamond', 'sans-serif';
+    background-attachment: fixed;
+}
+h1{
+text-align:center;
+color:#caab0a;
+background: #F0F0F0;
+text-decoration-line: underline;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', 'Arial', 'sans-serif';
+font-size: 22pt;
+}
+p{
+line-height:5px;
+font-size: 11pt;
+font-family: 'Georgia', 'Garamond','sans-serif';
+}
+h2{
+text-align:left;
+color:#caab0a;
+background: #F0F0F0;
+text-transform: uppercase;
+text-decoration-line: underline;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', 'Arial', 'sans-serif';
+font-size: 18pt;
+}
+
+ul.ingredients {
+    list-style-image: url('../recipeImages/pie_icon.gif');
+}
+
+ul.directions {
+    list-style-image: url('../recipeImages/pie_icon.gif');
+}
+ul.meringue {
+    list-style-image: url('../recipeImages/pie_icon.gif');
+}
+span.strong-point {
+    font-weight: bold;
+}
+span.deprecated {
+    text-decoration: line-through;
+}
+
+blockquote{
+background: #f6ff66;
+font-style: italic;
+font-size: 11pt;
+font-family: 'Georgia', 'Garamond','sans-serif';
+
+}
+a{
+color:#A4A400;
+}
+#footer{
+    text-align-last: end;
+    font-style: monospace;
+}
