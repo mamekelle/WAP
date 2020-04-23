@@ -1,0 +1,39 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    background-image: url('images/background.png') ;
+    font-size: 8pt;
+    font-family: Verdana, Tahoma, sans-serif;
+}
+.headerImage{
+           height: content;
+           width: 100%;
+}
+h1{
+text-align:center;
+  text-shadow: 2px 2px;
+    color: #162929;
+}
+
+#container{
+overflow:hidden;
+padding:10px;
+width: 1000px;
+}
+#column0{
+background-color:lightblue;
+float:right;
+width:460px;
+}
+
+#column1{
+background-color:lightgreen;
+float:right;
+width:260px;
+}
+.review {
+    font-size: 8pt;
+    display: inline-grid;
+    width: 47%;
+    margin-left: 2%;
+}
