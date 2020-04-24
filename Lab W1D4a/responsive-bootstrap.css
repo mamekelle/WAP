@@ -7,8 +7,12 @@ header {
     font-weight: 700;
 }
 
+div.col-sm-3{
+    background-color: #8eb9da;
+}
+
 footer {
-    background-color: #064e19;
+    background-color: #6baf7d;
     max-width: 100%;
     padding: 20px 0px;
     text-align: center;
