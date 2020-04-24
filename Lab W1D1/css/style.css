@@ -1,0 +1,57 @@
+body{
+margin:0;
+padding:0;
+font-size:100%;
+line-height:1;
+ background-color:#cacaca;
+}
+.banner::before {
+    background-image: url('../images/header-java.jpg');
+    background-position: center;
+    background-attachment: scroll;
+    background-repeat: repeat;
+    content: "";
+    display: block;
+    position: absolute;
+    margin-left: 0;
+    min-width: 100%;
+    min-height: 140px;
+    z-index: -1;
+    opacity: 0.6;
+    background-color: #343a40;
+}
+div.header img#avatar {
+    width: 150px;
+    margin: 10px 10px 10px 20px;
+    border-radius: 50%;
+}
+
+/* Footer stylesheet */
+.footer {
+    border-top: 1px solid #ddd;
+    overflow: hidden;
+    padding: 15px;
+    background-color: #ddd;
+}
+
+.footer-onBottom {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 12%;
+}
+
+.footer .siteInfo {
+    float: left;
+}
+
+.footer .w3cValidator {
+    float: right;
+    padding-right: 30px;
+}
+
+pre {
+    text-align-last: end;
+    font-family: monospace;
+    padding: 30px;
+}
