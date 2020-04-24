@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>TMNT - Rancid Tomatoes</title>
     <link href="./images/rotten.gif" rel="icon">
@@ -8,15 +9,15 @@
 </head>
 
 <body>
-<div>
+<div id="banner">
     <img class="headerImage" src="./images/banner.png" alt="Rancid Tomatoes"/>
 </div>
 
-<h1>TMNT (2007)</h1>
+<h1 id="headElement">TMNT (2007)</h1>
 <div id="container">
     <div id="column1">
         <div>
-            <img src="./images/overview.png" alt="general overview"/>
+            <img id="gen-img" src="./images/overview.png" alt="general overview"/>
         </div>
 
         <dl>
@@ -34,6 +35,7 @@
 
             <dt>MOVIE SYNOPSIS</dt>
             <dd>After the defeat of their old arch nemesis, The Shredder, the Turtles have grown apart as a family.</dd>
+
 
             <dt>MPAA RATING</dt>
             <dd>PG, for animated action violence, some scary cartoon images and mild language</dd>
@@ -63,24 +65,23 @@
     </div>
     <!-- Another column here-->
     <div id="column0">
-        <div>
-            <img src="./images/rottenbig.png" alt="Rotten"/>
-            33%
+        <div id="critics-top">
+            <img id="rev-img" src="./images/rottenbig.png" alt="Rotten"/> <span>33%</span>
         </div>
         <div class="review">
             <p>
+
+
                 <img src="./images/rotten.gif" alt="Rotten"/>
                 <q>Ditching the cheeky, self-aware wink that helped to excuse the concept's inherent corniness, the
-                    movie
-                    attempts to look polished and 'cool,' but the been-there animation can't compete with the
+                    movie attempts to look polished and 'cool,' but the been-there animation can't compete with the
                     then-cutting-edge puppetry of the 1990 live-action movie.</q>
             </p>
-        </div>
-        <div class="review">
             <p>
                 <img src="./images/critic.gif" alt="Critic"/>
                 Peter Debruge <br/>
-                Variety
+                <span class="publication">Variety</span>
+
             </p>
         </div>
         <div class="review">
@@ -89,12 +90,11 @@
                 <q>TMNT is a fun, action-filled adventure that will satisfy longtime fans and generate a legion of new
                     ones.</q>
             </p>
-        </div>
-        <div class="review">
             <p>
+
                 <img src="./images/critic.gif" alt="Critic"/>
                 Todd Gilchrist <br/>
-                IGN Movies
+                <span class="publication">IGN Movies</span>
             </p>
         </div>
         <div class="review">
@@ -102,11 +102,11 @@
                 <img src="./images/rotten.gif" alt="Rotten"/>
                 <q>It stinks!</q>
             </p>
-        </div>
-        <div class="review">
             <p>
+
+
                 <img src="./images/critic.gif" alt="Critic"/>
-                Jay Sherman (unemployed)
+                <span class="publication">  Jay Sherman (unemployed)</span>
             </p>
         </div>
         <div class="review">
@@ -116,28 +116,22 @@
                     stopped
                     them from becoming dull.</q>
             </p>
-        </div>
-        <div class="review">
-
             <p>
                 <img src="./images/critic.gif" alt="Critic"/>
                 Joshua Tyler <br/>
-                CinemaBlend.com
+                <span class="publication"> CinemaBlend.com</span>
             </p>
         </div>
         <div class="review">
-
             <p>
                 <img src="./images/rotten.gif" alt="Rotten"/>
                 <q>YOUR REVIEW HERE</q>
             </p>
-        </div>
-        <div class="review">
-
             <p>
                 <img src="./images/critic.gif" alt="Critic"/>
                 NAME <br/>
-                PUBLICATION
+                <span class="publication">  PUBLICATION</span>
+
             </p>
         </div>
         <div class="review">
@@ -150,13 +144,11 @@
                     once
                     sought to spoof.</q>
             </p>
-        </div>
-        <div class="review">
-
             <p>
                 <img src="./images/critic.gif" alt="Critic"/>
                 Jeannette Catsoulis <br/>
-                New York Times
+                <span class="publication">  New York Times</span>
+
             </p>
         </div>
         <div class="review">
@@ -166,12 +158,11 @@
                     filmmakers
                     went along.</q>
             </p>
-        </div>
-        <div class="review">
             <p>
                 <img src="./images/critic.gif" alt="Critic"/>
                 Ed Gonzalez <br/>
-                Slant Magazine
+                <span class="publication">  Slant Magazine</span>
+
             </p>
         </div>
         <div class="review">
@@ -182,12 +173,10 @@
                     accomplished
                     restart to this franchise.</q>
             </p>
-        </div>
-        <div class="review">
             <p>
                 <img src="./images/critic.gif" alt="Critic"/>
                 Mark Palermo <br/>
-                Coast (Halifax, Nova Scotia)
+                <span class="publication"> Coast (Halifax, Nova Scotia)</span>
             </p>
         </div>
         <div class="review">
@@ -197,12 +186,10 @@
                     of
                     the three live action films.</q>
             </p>
-        </div>
-        <div class="review">
             <p>
                 <img src="./images/critic.gif" alt="Critic"/>
                 Steve Rhodes <br/>
-                Internet Reviews
+                <span class="publication">   Internet Reviews</span>
             </p>
         </div>
         <div class="review">
@@ -210,21 +197,19 @@
                 <img src="./images/rotten.gif" alt="Rotten"/>
                 <q>YOUR REVIEW HERE</q>
             </p>
-        </div>
-        <div class="review">
-
             <p>
                 <img src="./images/critic.gif" alt="Critic"/>
                 NAME <br/>
-                PUBLICATION
+                <span class="publication"> PUBLICATION</span>
             </p>
         </div>
     </div>
-    <p>(1-10) of 88</p>
+    <p id="pages">(1-10) of 88</p>
 </div>
-<div>
+<div id="validators">
     <a href="https://validator.w3.org/check/referer"><img src="./images/w3c-html.png" alt="Valid HTML5"/></a> <br/>
     <a href="https://jigsaw.w3.org/css-validator/check/referer"><img src="./images/w3c-css.png" alt="Valid CSS"/></a>
 </div>
 </body>
+
 </html>
