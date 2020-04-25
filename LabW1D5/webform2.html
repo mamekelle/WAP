@@ -2,50 +2,91 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <link href="style.css" rel="stylesheet"/>
-    <title>New Product Form</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" rel="stylesheet">
+    <link href="css/styleForm2.css" rel="stylesheet">
+    <title>Title</title>
 </head>
 <body>
-<section class="container-fluid">
-    <section class="row justify-content-center">
-        <section class="col-12 col-sm-6 col-md-3">
-            <form class="form-container">
-                <div class="form-group">
-                    <label for="exampleInputEmail1">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
-                        else.</small>
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{10,}"
-                           title="Password must be length 10">
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputUrl">URL</label>
-                    <input type="text" class="form-control" id="exampleInputUrl" pattern="https?://.+"
-                           title="Url must start with http:// or https://">
-                </div>
-                <div class="form-group form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                </div>
-                <button id="but1" type="submit" class="btn btn-primary">Submit</button>
-            </form>
-        </section>
-    </section>
-</section>
-<!--This block includes w3c validators: html, css, js-->
-<div class="w3cValidator">
+<nav class="navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand" href="#">MUM Golden Domo Market::: &nbsp;&nbsp;&nbsp;| </a>
+    <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"
+            data-target="#navbarSupportedContent" data-toggle="collapse" type="button">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="navbar-brand" href="#">Products &nbsp;&nbsp;&nbsp;| </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Supplier</a>
+            </li>
+
+        </ul>
+        <!--<form class="form-inline my-2 my-lg-0">-->
+        <span class="navbar-text">Hello!</span>
+        <button class="btn btn-outline-success my-2 my-sm-0 bg-light" type="submit">Sign Out</button>
+        <!-- </form>-->
+    </div>
+</nav>
+
+<div class="container main-container-style">
+    <h2>New Product Form</h2><br/>
+    <form action="index.html" method="post" onsubmit="onClickSubmit()">
+        <div class="form-row">
+            <div class="form-group col-6">
+                <label for="productNumInput">Product Number</label>
+                <input class="form-control" id="productNumInput" name="productNum" required title="Enter Product Number"
+                       type="text"/>
+            </div>
+            <div class="from-group col-6">
+                <label for="stockQntInput">Quantity in stock</label>
+                <input class="form-control" id="stockQntInput" name="stockQuant" required type="number" value="0">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-6">
+                <label for="nameInput">Name</label>
+                <input class="form-control" id="nameInput" name="name" required title="Enter Name" type="text"/>
+            </div>
+            <div class="from-group col-6">
+                <label for="supplierInput">Supplier</label>
+                <select class="form-control" id="supplierInput" name="supplier" required>
+                    <option selected value="">Select Supplier</option>
+                    <option value="Wolmart">Wolmart</option>
+                    <option value="Media World">Media World</option>
+                </select>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="unitPriceInput">Unit Price</label>
+                <input class="form-control" id="unitPriceInput" name="unitPrice" required title="Enter Unit Price"
+                       type="number"
+                       value="0.0"/>
+            </div>
+            <div class="from-group col-md-6">
+                <label for="dateInput">Date supplied</label>
+                <input class="form-control" id="dateInput" name="suppliedDate" required type="date">
+            </div>
+            <div class="form-group bottom-button">
+                <button class="btn btn-light rest-button pull-right" type="reset">Reset</button>
+                <button class="btn btn-danger cancel-button pull-right" type="submit">Cancel</button>
+                <button class="btn btn-primary submit-button pull-right" type="submit">Add Product</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<hr/>
+<footer>
     <a href="https://validator.w3.org/check/referer">
-        <img src="http://mumstudents.org/cs472/2013-09/images/w3c-html.png" alt="html validator"/>
+        <img alt="HTMLValidator" src="http://mumstudents.org/cs472/2013-09/images/w3c-html.png">
     </a>
     <a href="https://jigsaw.w3.org/css-validator/check/referer">
-        <img src="http://mumstudents.org/cs472/2013-09/images/w3c-css.png" alt="css validator"/>
+        <img alt="CSS validator" src="http://mumstudents.org/cs472/2013-09/images/w3c-css.png">
     </a>
-</div>
+</footer>
+</body>
 </html>
