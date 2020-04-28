@@ -25,25 +25,14 @@ window.onload = function(){
 
 function helloWorld() {
     const textArea = document.getElementById("textArea");
-    if (textArea.style.fontSize == "") {
+    if (textArea.style.fontSize === "") {
         textArea.style.fontSize = "12pt";
     }
     textArea.style.fontSize = parseFloat(textArea.style.fontSize) + 2 + "pt";
 }
-function textAreaBold() {
-    const textArea = document.getElementById("textArea");
-    if (document.getElementById("checkBox").checked){
-        textArea.style.fontWeight = "bold";
-        textArea.style.color = "green";
-        textArea.style.textDecoration ="underline";
-        document.body.style.backgroundImage = "url('./images/hundred-dollar-bill.jpg')";
-    }
-    else{
-        textArea.style.fontWeight = "normal";
-        textArea.style.color = "black";
-        textArea.style.textDecoration ="none";
-        document.body.style.backgroundImage = "none";
-    }
 
+function textAreaBold() {
+    this.className='textArea';
 }
+
 
