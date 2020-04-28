@@ -32,3 +32,16 @@ textarea {
     float: right;
     padding-right: 30px;
 }
+.textAreaNormal{
+    font-weight :normal;
+    color : red;
+    text-decoration :none;
+    background-image :none !important;
+}
+#textArea{
+    font-weight :bold;
+    color : green;
+    text-decoration :underline;
+    background-image :url('./images/hundred-dollar-bill.jpg');
+}
+
