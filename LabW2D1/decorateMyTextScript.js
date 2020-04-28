@@ -18,6 +18,10 @@ function delayMsg() {
     setInterval(helloWorld, 500);
     document.getElementById("textArea").innerHTML = "Wait for it...";
 }
+window.onload = function(){
+ document.getElementById("decorationButton").onclick=delayMsg;
+ document.getElementById("checkBox").onchange=textAreaBold;
+};
 
 function helloWorld() {
     const textArea = document.getElementById("textArea");
