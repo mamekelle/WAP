@@ -32,7 +32,20 @@ function helloWorld() {
 }
 
 function textAreaBold() {
-    this.className='textArea';
+    const textArea = document.getElementById("textArea");
+    if (document.getElementById("checkBox").checked){
+        textArea.style.fontWeight = "bold";
+        textArea.style.color = "green";
+        textArea.style.textDecoration ="underline";
+        document.body.style.backgroundImage = "url('./images/hundred-dollar-bill.jpg')";
+    }
+    else{
+        textArea.style.fontWeight = "normal";
+        textArea.style.color = "black";
+        textArea.style.textDecoration ="none";
+        document.body.style.backgroundImage = "none";
+    }
+
 }
 
 
