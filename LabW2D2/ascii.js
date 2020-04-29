@@ -1,6 +1,6 @@
 /*jshint esversion: 6  */
 
-(function () { // no globals
+(function () {
     "use strict";
     const playBtn = document.getElementById("play");
     const stopBtn = document.getElementById("stop");
@@ -48,20 +48,13 @@
     }
 
     function animate() {
-        const t = frame.shift(); // get/return + remove first element
+        const t = frame.shift();
         textarea.value = t;
-        frame.push(t); // push first element to last
-        //textarea.value = frame[counter];
-        //counter++;
-        // when last frame reaches
-        //if (frame.length == counter) {
-        //counter = 0;
-        //beginAnimation;
-        //}
+        frame.push(t);
+
     }
 
     function stopAnimation() {
-        //counter = 0;
         playBtn.disabled = false;
         stopBtn.disabled = true;
         anim_selector.disabled = false;
