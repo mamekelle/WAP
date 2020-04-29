@@ -55,3 +55,9 @@ pre {
     font-family: monospace;
     padding: 30px;
 }
+
+#column {
+    column-count: 3;
+    column-gap: 40px;
+    column-rule: 2px dotted gray;
+}
