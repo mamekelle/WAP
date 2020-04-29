@@ -57,7 +57,7 @@ pre {
 }
 
 #column {
-    column-count: 3;
+    column-count: 2;
     column-gap: 40px;
     column-rule: 2px dotted gray;
 }
