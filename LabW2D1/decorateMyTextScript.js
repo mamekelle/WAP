@@ -18,9 +18,15 @@ function delayMsg() {
     setInterval(helloWorld, 500);
     document.getElementById("textArea").innerHTML = "Wait for it...";
 }
-window.onload = function(){
- document.getElementById("decorationButton").onclick=delayMsg;
- document.getElementById("checkBox").onchange=textAreaBold;
+
+reverseArray = function (a) {
+    return a.map((val, index) => a[a.length - 1 - index]);
+}
+console.log("The reverseArray value equals: " + reverseArray([3, 1, 3, 3, 5]));
+
+window.onload = function () {
+    document.getElementById("decorationButton").onclick = delayMsg;
+    document.getElementById("checkBox").onchange = textAreaBold;
 };
 
 function helloWorld() {
@@ -33,16 +39,15 @@ function helloWorld() {
 
 function textAreaBold() {
     const textArea = document.getElementById("textArea");
-    if (document.getElementById("checkBox").checked){
+    if (document.getElementById("checkBox").checked) {
         textArea.style.fontWeight = "bold";
         textArea.style.color = "green";
-        textArea.style.textDecoration ="underline";
+        textArea.style.textDecoration = "underline";
         document.body.style.backgroundImage = "url('./images/hundred-dollar-bill.jpg')";
-    }
-    else{
+    } else {
         textArea.style.fontWeight = "normal";
         textArea.style.color = "black";
-        textArea.style.textDecoration ="none";
+        textArea.style.textDecoration = "none";
         document.body.style.backgroundImage = "none";
     }
 
