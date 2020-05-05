@@ -32,7 +32,7 @@ if (!window.testData) {
         }
 
         this.prepend = function (elem, inputList) {
-            let list = null;
+            let list;
             list = {
                 value: elem,
                 rest: inputList
@@ -52,8 +52,8 @@ if (!window.testData) {
             if (x === y) {
                 return true;
             }
-            if ((typeof x == "object" && x != null) && (typeof y == "object" && y != null)) {
-                for (const key in x) {
+            if ((typeof x === "object" && x != null) && (typeof y === "object" && y != null)) {
+                for (let key in x) {
                     if (!(key in y)) return false;
                     if (!this.deepEqual(x[key], y[key])) return false;
                 }
