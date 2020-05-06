@@ -1,16 +1,24 @@
 /*jshint  esversion:6, globalstrict:true */
-/*global assert, Account, SavingsAccount, Bank, CheckingAccount */
+/*global assert, Account, SavingsAccount, CheckingAccount , Bank*/
 "use strict";
 
 class Bank {
     constructor() {
         this.accounts = [];
-        this.checkingAccounts=[];
-        this.savingAccounts=[];
+        this.checkingAccounts = [];
+        this.savingAccounts = [];
     }
 
     addAccounts(account) {
         this.accounts.push(account);
+    }
+
+    addCheckingAccounts(account, overDraft) {
+        let checkingAccount = new CheckingAccount(account, overDraft);
+        checkingAccount.setOverDraft(overDraft);
+        this.checkingAccounts.push(checkingAccount);
+        console.log("addCheckingAccounts " + account.toString());
+        return account.getNumber();
     }
 
     addSavingAccounts(account, interest) {
@@ -18,21 +26,23 @@ class Bank {
         savingsAccount.setInterest(interest);
         this.savingAccounts.push(savingsAccount);
         console.log("addSavingAccounts " + savingsAccount.toString());
-
         return account.getNumber();
     }
 
+
     closeAccount(number) {
         this.accounts = this.accounts.filter(a => a.getNumber() !== number);
+        return this.accounts.length;
     }
 
-    addCheckingAccounts(account, overDraft) {
-       /* let checkingAccount = new CheckingAccount(account, overDraft);
-        checkingAccount.setOverDraft(overDraft);
-        this.checkingAccounts.push(checkingAccount);
-        console.log("addCheckingAccounts " + account.toString());
-        return account.getNumber();*/
-        return 1;
+    closeSavingAccount(number) {
+        this.savingAccounts = this.savingAccounts.filter(a => a.getNumber() !== number);
+        return this.savingAccounts.length;
+    }
+
+    closeCheckingAccount(number) {
+        this.checkingAccounts = this.checkingAccounts.filter(a => a.getNumber() !== number);
+        return this.checkingAccounts.length;
     }
 }
 
@@ -45,10 +55,10 @@ bank.addAccounts(account);
 bank.addAccounts(account1);
 bank.addAccounts(account2);
 
-console.log("length B "+bank.accounts.length);
+console.log("length B " + bank.accounts.length);
 console.log(account1.toString());
 bank.closeAccount(22);
-console.log("length A "+bank.accounts.length);
+console.log("length A " + bank.accounts.length);
 
 
 let savingsAccount = bank.addSavingAccounts(account, 200);
