@@ -1,5 +1,5 @@
 /*jshint  esversion:6, globalstrict:true */
-/*global assert, Account, SavingsAccount, Bank, CheckingAccount */
+/*global assert, Account, SavingsAccount, CheckingAccount, Bank */
 "use strict";
 
 class SavingAccount extends Account {
@@ -23,7 +23,7 @@ class SavingAccount extends Account {
 
     endOfMonth(){
         return "Interest added SavingsAccount "+ this.account.getNumber() +" : balance: "
-            + this.account.getBalance() +"interest: "+this.addInterest();
+            + this.account.getBalance() +" interest: "+this.addInterest();
     }
 
     toString() {

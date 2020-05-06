@@ -1,6 +1,7 @@
 /*jshint  esversion:6, globalstrict:true */
-/*global assert, Account, SavingsAccount, Bank, CheckingAccount */
+/*global assert, Account, SavingsAccount, CheckingAccount, Ban, */
 "use strict";
+
 class CheckingAccount extends Account {
     constructor(account, overDraft) {
         super(account.getNumber());
@@ -18,12 +19,14 @@ class CheckingAccount extends Account {
 
     withDraw(amount) {
         if (this.account.getBalance() - amount > this.getOverDraft()) {
-            this.account.withDraw(amount);
+            this.account._balance = this.account.getBalance() - amount;
         }
+        return this.account.getBalance();
     }
-    endOfMonth(){
-        return "Warning, low balance CheckingAccount "+ this.account.getNumber() +" : balance: "
-            + this.account.getBalance() +"overdraft limit: "+this.overDraft();
+
+    endOfMonth() {
+        return "Warning, low balance CheckingAccount " + this.account.getNumber() + " : balance: "
+            + this.account.getBalance() + "overdraft limit: " + this.getOverDraft();
     }
 
     toString() {
@@ -31,4 +34,3 @@ class CheckingAccount extends Account {
             this.account.getBalance() + ": overdraft amount " + this.getOverDraft();
     }
 }
-
