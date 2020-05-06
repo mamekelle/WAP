@@ -1,6 +1,6 @@
 /*jshint  esversion:6, globalstrict:true */
 //-- makes jsHing recognize ES6 and also allows "use strict"; at top of a file
-/*global assert, Account, SavingsAccount, Bank */
+/*global assert, Account, SavingsAccount, Bank, CheckingAccount */
 //-- sample for the global objects in the Bank test.js file
 "use strict";
 
@@ -69,7 +69,9 @@ class Account {
         }
         this._balance -= amount;
     }
-
+    endOfMonth(){
+        return " ";
+    }
     /**
      * @returns {string} representation of this account
      */
