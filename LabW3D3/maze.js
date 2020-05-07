@@ -12,9 +12,12 @@ $(document).ready(function () {
     });
 
     $("#end").click(function () {
+     if (status !== "lose" ||status !== "begin"){
+            $("#status").text("Please start the game first!");
+        }
         if (status === "lose") {
-            $("#status").text("You Lose!");
-        } else {
+            lose();
+        } else if (status === "begin") {
             $("#status").text("You Win!");
         }
         begin = 0;
