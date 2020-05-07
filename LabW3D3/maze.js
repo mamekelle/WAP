@@ -5,14 +5,14 @@ $(document).ready(function () {
     let begin = 0;
     let end = 0;
     $(".boundary").hover(function () {
-        if (begin == 1 && end == 0) {
+        if (begin === 1 && end === 0) {
             $(this).addClass("youlose");
             lose();
         }
     });
 
     $("#end").click(function () {
-        if (status == "lose") {
+        if (status === "lose") {
             $("#status").text("You Lose!");
         } else {
             $("#status").text("You Win!");
@@ -30,7 +30,7 @@ $(document).ready(function () {
     });
 
     $("#maze").mouseleave(function () {
-        if (status == "begin" && end == 0) {
+        if (status === "begin" && end === 0) {
             $(".boundary").addClass("youlose");
             lose();
         }
