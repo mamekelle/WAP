@@ -1,8 +1,4 @@
-body{
-    background-color: mintcream;
-}
 .circle{
-
     position:relative;
     top:200px;
     left:0px;
@@ -13,6 +9,7 @@ body{
     border-radius:100%;
     float:left;
 }
+
 /*html and css validation icons on a bottom right fixed position and is opaque */
 #validation{
     position: fixed;
@@ -20,4 +17,18 @@ body{
     right: 10px;
     opacity: 0.5;
     text-align: right;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #064e19;
+}
+li {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 8px 10px;
 }

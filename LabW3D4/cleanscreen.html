@@ -6,17 +6,18 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="circle.js"></script>
 </head>
-<body data-gr-c-s-loaded="true">Width:<br>
-<input id="width" type="number" value="50"><br>Grow Amount:<br>
-<input id="growAmt" type="number" value="10"><br>Grow Rate:<br>
-<input id="rate" type="number" value="250"><br>Number of Circle:<br>
-<input id="number" type="number" value="3"><br>
-<input id="start" type="button" value="Start">
-
-<div style="clear:both;">
-
-</div>
-
+<body>
+<ul>
+    <li>Width:</li>
+    <li><label for="width"><input id="width" type="number" min="1" value="50"></label></li>
+    <li>Grow Amount:</li>
+    <li><label for="growAmt"><input id="growAmt" type="number" min="1" value="10"></label></li>
+    <li>Grow Rate:</li>
+    <li><label for="rate"><input id="rate" type="number" min="1" value="250"></label></li>
+    <li>Number of circles:</li>
+    <li><label for="number"><input id="number" type="number" min="1" value="3"></label></li>
+    <li><label for="start"><input id="start" type="button" value="Start"></label></li>
+</ul>
 <div id="validation">
     <a href="https://validator.w3.org/check/referer">
         <img alt="HTMLValidator" src="http://mumstudents.org/cs472/2013-09/images/w3c-html.png">
