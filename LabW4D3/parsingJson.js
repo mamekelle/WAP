@@ -1,24 +1,25 @@
 /*jshint  esversion:6, globalstrict:true */
 "use strict";
 $(function () {
-    $('#fetch').on('click', fetchJson);
+    $('#fetchUser').on('click', fetchUserJson);
 
-    function fetchJson() {
+    function fetchUserJson() {
         const id = $('#userId').val();
-        $('#user').html("");
-        fetch('http://jsonplaceholder.typicode.com/users')
+        let html = $('#users').html("");
+        fetch('https://jsonplaceholder.typicode.com/users')
             .then(response => response.json())
             .then(response => {
                     response.map(user => {
                         if (user.id === parseInt(id)) {
-                            const html = `<p> Id: ${user.id} </p> <p> Name: ${user.name} </p> <p> User name: ${user.username} </p> 
-                    <p> Emal: ${user.emal} </p> <p> Phone: ${user.phone} </p> <p> Website: ${user.website} </p>`;
-                            return $('#user').append(html);
+                            html.append(`<p> Id: ${user.id} </p> <p> Name: ${user.name} </p> <p> User name: ${user.username} </p> 
+                    <p> Emal: ${user.emal} </p> <p> Phone: ${user.phone} </p> <p> Website: ${user.website} </p>`);
                         }
                     });
                 }
             )
             .catch(error => console.error("Error: ", error));
+        return html;
+
     }
 
 });
